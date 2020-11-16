@@ -1,0 +1,9 @@
+- hosts: all
+  vars:
+    rid: 1.1.1.1
+    asn: 65530
+    neighbors:
+      - swp1
+      - swp2
+  roles:
+  - bgp

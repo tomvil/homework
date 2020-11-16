@@ -1,0 +1,32 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  hosts: all
+  require_chef_for_busser: false
+  require_ansible_repo: true
+  require_ansible_omnibus: false
+  ansible_verbose: true
+  ansible_verbosity: 1
+  roles_path: roles
+
+platforms:
+  - name: CumulusCommunity/cumulus-vx
+    driver:
+      provision: true
+      vagrantfiles: ['add_ansible_and_interface.rb']
+
+suites:
+  - name: node1
+    provisioner:
+      playbook: node1.yml
+
+  - name: node2
+    provisioner:
+      playbook: node2.yml
+
+  - name: node3
+    provisioner:
+      playbook: node3.yml
