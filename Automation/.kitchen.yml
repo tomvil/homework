@@ -5,7 +5,6 @@ driver:
 provisioner:
   name: ansible_playbook
   hosts: all
-  require_chef_for_busser: false
   require_ansible_repo: true
   require_ansible_omnibus: false
   ansible_verbose: true
@@ -16,7 +15,7 @@ platforms:
   - name: CumulusCommunity/cumulus-vx
     driver:
       provision: true
-      vagrantfiles: ['add_ansible_and_interface.rb']
+      vagrantfiles: ['provision_cumulus.rb']
 
 suites:
   - name: node1

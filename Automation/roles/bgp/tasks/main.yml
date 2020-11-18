@@ -1,4 +1,11 @@
 ---
+- name: Make sure frr is running
+  systemd:
+    name: frr.service
+    state: started
+    enabled: yes
+  become: yes
+     
 - name: Add loopback interface
   nclu:
     commands:
