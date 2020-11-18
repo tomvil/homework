@@ -11,6 +11,12 @@
     commands:
       - add loopback lo ip address {{ rid + '/32' }}
 
+- name: Add IP addresses to swp ports
+  nclu:
+    commands:
+      - add interface {{ item.interface }} ip address {{ item.ip }}
+  loop: "{{ ports }}"
+
 - name: Configure BGP
   nclu:
     commands:
@@ -21,7 +27,7 @@
 - name: Configure BGP Neighbors
   nclu:
     commands:
-      - add bgp neighbor {{ item }} interface remote-as external
+      - add bgp neighbor {{ item }} remote-as external
   loop: "{{ neighbors }}"
 
 - name: Commit changes

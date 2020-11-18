@@ -20,12 +20,12 @@ platforms:
 suites:
   - name: node1
     provisioner:
-      playbook: node1.yml
+      playbook: playbook/node1.yml
 
   - name: node2
     provisioner:
-      playbook: node2.yml
+      playbook: playbook/node2.yml
 
   - name: node3
     provisioner:
-      playbook: node3.yml
+      playbook: playbook/node3.yml

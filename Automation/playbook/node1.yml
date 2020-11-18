@@ -1,0 +1,12 @@
+- hosts: all
+  vars:
+    rid: 1.1.1.1
+    asn: 65530
+    ports:
+      - { interface: 'swp1', ip: '10.1.1.1/30' }
+      - { interface: 'swp2', ip: '10.1.2.1/30' }
+    neighbors:
+      - '10.1.1.2'
+      - '10.1.2.2'
+  roles:
+  - bgp

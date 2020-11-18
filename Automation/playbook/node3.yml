@@ -2,7 +2,9 @@
   vars:
     rid: 3.3.3.3
     asn: 65532
+    ports:
+      - { interface: 'swp2', ip: '10.1.2.2/30' }
     neighbors:
-      - swp2
+      - 10.1.2.1
   roles:
   - bgp
