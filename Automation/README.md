@@ -1,3 +1,4 @@
+```
 kitchen verify
 -----> Starting Test Kitchen (v2.7.2)
 -----> Verifying <node1-CumulusCommunity-cumulus-vx>...
@@ -13,3 +14,4 @@ kitchen verify
        2 tests, 0 failures
        Downloading files from <node1-CumulusCommunity-cumulus-vx>
        Finished verifying <node1-CumulusCommunity-cumulus-vx> (0m2.45s).
+```
