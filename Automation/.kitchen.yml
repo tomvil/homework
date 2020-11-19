@@ -18,14 +18,14 @@ platforms:
       vagrantfiles: ['provision_cumulus.rb']
 
 suites:
-  - name: node1
+  - name: node3
     provisioner:
-      playbook: playbook/node1.yml
+      playbook: playbook/node3.yml
 
   - name: node2
     provisioner:
       playbook: playbook/node2.yml
 
-  - name: node3
+  - name: node1
     provisioner:
-      playbook: playbook/node3.yml
+      playbook: playbook/node1.yml
